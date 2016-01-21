@@ -12,7 +12,7 @@ ENV CLIENTPORT 7000
 EXPOSE ${SERVERPORT} ${CLIENTPORT}
 
 RUN sudo apt-get update && \
- sudo apt-get install -y wget unzip openssh-server && \
+ sudo apt-get install -y wget unzip openssh-server software-properties-common && \
  sed -ri 's/UsePAM yes/#UsePAM yes/g' /etc/ssh/sshd_config && \
  service ssh restart
 
