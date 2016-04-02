@@ -39,6 +39,6 @@ RUN wget ${PLUGINURL}JMeterPlugins-WebDriver-${JMPLUGINVERS}.zip && \
  unzip -o JMeterPlugins-WebDriver-${JMPLUGINVERS}.zip -d /apache-jmeter-${JMVERS}/ && \
  rm -f *.zip
 
-#CMD /apache-jmeter-${JMVERS}/bin/jmeter-server \
-# -Dclient.rmi.localport=${SERVERPORT} \
-# -Dserver.rmi.localport=${SERVERPORT}
+CMD /apache-jmeter-${JMVERS}/bin/jmeter-server \
+ -Dclient.rmi.localport=${SERVERPORT} \
+ -Dserver.rmi.localport=${SERVERPORT}
